@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* VARIABLE CSS */
+:root{
+    --first-color: #9C9EFE;
+    --second-color: #FEFBF6 ;
+    --third-color: #06283D;
+    --fourth-color: #2B4865;
+    --fifth-color: #0F457B;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container{
+  background: url(./Icon\ Grid.svg);
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app_wrapper{
+  background-color: var(--second-color);
+  min-width: 300px;
+  min-height: 450px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 3px 6px 40px #000;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header h1{
+  color: black;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.task-input{
+  outline: none;
+  width: 160px;
+  padding: 15px;
+  margin-right: 13px;
+  font-size: 20px;
+  color: var(--second-color);
+  background-color: #000;
+  border: var(--fourth-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.button-add{
+  width: 70px;
+  padding: 15px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 0;
+  background-color: var(--first-color);
+  cursor: pointer;
+}
+
+.list-item{
+  display: flex;
+  margin: 10px 0;
+  border: 1px solid var(--fourth-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 15px;
+  max-height: 30px;
+}
+
+.button-complete, .button-delete, .button-edit{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 25px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.button-delete, .button-edit{
+  color: var(--first-color);
+}
+
+
+
+.list{
+  width: 120px;
+  background-color: var(--second-color);
+  border: none;
+  color: black  ;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-right: 15px;
+}
+
+input:focus,
+button:focus{
+  outline: none;
+}
+
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .home {
+    padding-top: 7rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* For medium devices */
+@media screen and (min-width: 767px) {
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__toggle, 
+  .nav__close {
+    display: none;
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 3.5rem;
   }
 }
